@@ -1,0 +1,58 @@
+    <%- include("./partials/header") %>
+    <div id="main-content" class="container rel--margin">
+      <div class="alert alert-dark d-none" id="alert" role="alert">
+      </div>
+      <% if(message != null) { %>
+      <div class="alert alert-success" id="alert-success" role="alert">
+        <%= message %>
+      </div>
+      <% } %>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mt-3">
+          <li class="breadcrumb-item"><a href="/">Cars</a></li>
+          <li class="breadcrumb-item">List Car</li>
+        </ol>
+      </nav>
+      <h1 class="d-inline">List Car</h1>
+      <a class="btn float-end" id="addNewCar" style="background-color: #0D28A6; color: white" href="/addnewcar" ><i class="bi bi-plus"></i> Add New Car</a>
+      <div class="row row-cols-1 row-cols-md-3" id="section-content">
+        <% if (mobil.length>=1) {%>
+        <% mobil.forEach((el,index)=>{ %>
+        <div class="col my-2">
+          <div class="card h-100">
+            <img class="skeleton h-100 card-img-top">
+            <div class="card-body">
+              <p class="skeleton card-title"></p>
+              <h5 class="skeleton card-text"></h5>
+              <p class="skeleton card-text"><small class="skeleton-text text-muted"><i class="bi bi-clock"></i> </small></p>
+              <div class="skeleton hstack gap-2">
+              <button type="button" class="skeleton" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><i class="bi bi-trash"></i></button>
+              <a class="skeleton"><i class="bi bi-pencil-square"></i> </a>
+            </div>
+            </div>
+          </div>
+        </div>
+        <% }) } else { %>
+          <div class="col w-100">
+            <div class="card h-100"><h3 class="text-center">Data Mobil Kosong</h3>
+            </div>
+            </div>
+          <% } %>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content py-3 px-3">
+          <div class="modal-body">
+<img src="css/delete.png" class="w-50 d-block mx-auto" alt="Gambar Hapus Data Mobil">
+<p class="text-center"><strong>Menghapus data mobil</strong></p>
+<p class="text-center">Setelah dihapus, data mobil tidak dapat dikembalikan. Yakin ingin menghapus?</p>
+<div class="hstack gap-2 justify-content-center">
+            <button type="button" class="btn btn-primary w-25 ya">Ya</button>
+            <button type="button" class="btn btn-outline-primary w-25" data-bs-dismiss="modal">Tidak</button>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <%- include("./partials/footer") %>

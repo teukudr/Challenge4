@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Binar Car Rental</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  
+  <body class="bg-light">
+    <div class="d-flex flex-column flex-shrink-0 position-fixed" style="width: 4.5rem;height:100vh; background-color: #0D28A6;">
+      <a href="/" class="d-block p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
+        <div class="box bg-light"></div>
+      </a>
+      <ul class="nav nav-pills nav-flush flex-column mb-auto text-center" id="sidebar__blue">
+        <li class="nav-item">
+          <a href="#" class="nav-link sidebar--btn py-3 border-bottom text-white size--font__05" aria-current="page" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+            <i class="bi bi-house text-white size--font__1"></i>
+            Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link sidebar--btn py-3 border-bottom text-white size--font__05" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard" id="cars">
+            <i class="bi bi-car-front text-white size--font__1"></i>
+            Cars
+          </a>
+        </li>
+      </ul>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-white bg-white shadow-sm" aria-label="Offcanvas navbar large" style="margin-left:4.5rem;">
+      <div class="container-fluid">
+        <div class="hstack gap-3">
+          <div class="box--landscape"></div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" id="burger">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        </div>
+        <div class="d-flex mt-3 mt-lg-0" role="search">
+          <input class="form-control me-2" type="search" placeholder="Cari nama mobil" id="cari" aria-label="Search">
+          <button id="btnCari" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#dataSearch">Search</button>
+        </div>
+      </div>
+    </nav>
+    <div class="offcanvas offcanvas-start bottom-0" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel" style="margin-left:4.5rem; color: #0D28A6;">
+      <div class="offcanvas-header mt-5">
+        <h5 class="offcanvas-title text-secondary mt-3" id="offcanvasNavbar2Label ">Cars</h5>
+        
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">List Car</a>
+          </li>
+        </ul>
+      </div>
+    </div>

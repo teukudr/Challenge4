@@ -1,0 +1,82 @@
+<%- include("./partials/header") %>
+<div id="main-content" class="container rel--margin">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mt-3">
+        <li class="breadcrumb-item"><a href="#">Cars</a></li>
+        <li class="breadcrumb-item"><a href="/">List Car</a></li>
+        <li class="breadcrumb-item">Add New Car</li>
+      </ol>
+    </nav>
+    <h1 class="d-inline">Add New Car</h1>
+    <div class="row" id="section-content">
+        <div class="col-12">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <form method="POST" action="/Car" id="create" enctype="multipart/form-data">
+                    <div class="row mb-2 g-3 align-items-center">
+                        <div class="col-2">
+                          <label for="inputPassword6" class="col-form-label">Nama</label>
+                        </div>
+                        <div class="col-4">
+                          <input type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" placeholder="Avanza" name="name">
+                        </div>
+                        <!-- <div class="col-auto">
+                          <span id="passwordHelpInline" class="form-text">
+                            Must be 8-20 characters long.
+                          </span>
+                        </div> -->
+                      </div>
+                      <div class="row mb-2 g-3 align-items-center">
+                        <div class="col-2">
+                          <label for="inputPassword6" class="col-form-label">Sewa Per Hari</label>
+                        </div>
+                        <div class="col-4">
+                          <input type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" placeholder="Rp. 0,-" name="rent">
+                        </div>
+                        <!-- <div class="col-auto">
+                          <span id="passwordHelpInline" class="form-text">
+                            Must be 8-20 characters long.
+                          </span>
+                        </div> -->
+                      </div>
+                      <div class="row mb-2 g-3 align-items-center">
+                        <div class="col-2">
+                          <label for="inputPassword6" class="col-form-label">Ukuran</label>
+                        </div>
+                        <div class="col-4">
+                          <select id="inputPassword6" class="form-select" aria-describedby="passwordHelpInline" name="size">
+                            <option selected>Pilih Ukuran</option>
+                            <option value="1">Small</option>
+                            <option value="2">Medium</option>
+                            <option value="3">Large</option>
+                            </select>
+                        </div>
+                        <!-- <div class="col-auto">
+                          <span id="passwordHelpInline" class="form-text">
+                            Must be 8-20 characters long.
+                          </span>
+                        </div> -->
+                      </div>
+                      <div class="row mb-2 g-3 align-items-center">
+                        <div class="col-2">
+                          <label for="inputPassword6" class="col-form-label">Foto</label>
+                        </div>
+                        <div class="col-4">
+                            <div class="input-group">
+                                <input type="file" class="form-control" id="inputGroupFile02" name="photo">
+                                <label class="bg-white input-group-text" for="inputGroupFile02"><i class="bi bi-upload"></i></label>
+                              </div>
+                          <span id="passwordHelpInline" class="form-text">
+                            File size max. 2MB
+                          </span>
+                        </div>
+                      </div>
+                      </form>
+                </div>
+              </div>
+              <a type="button" class="btn btn-outline-primary me-3" href="/">Cancel</a>
+              <button type="submit" class="btn btn-primary" id="savecar" form="create" value="Submit">Save</button>
+        </div>
+    </div>
+  </div>
+<%- include("./partials/footer") %>
